@@ -33,13 +33,13 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_UP:
+            if event.key == pygame.K_PAGEUP:
                 if zoomout <= 16:
                     zoomout += 1
                     map_request = "https://static-maps.yandex.ru/1.x/?ll={0}&size=450,450&z={1}&l=sat".format(coords,
                                                                                                           str(zoomout
                                                                                                               ))
-            elif event.key == pygame.K_DOWN:
+            elif event.key == pygame.K_PAGEDOWN:
                 if zoomout >= 1:
                     zoomout -= 1
                     map_request = "https://static-maps.yandex.ru/1.x/?ll={0}&size=450,450&z={1}&l=sat".format(coords,
